@@ -1,24 +1,23 @@
 {
-  "conversionMode": 0,
-  "compression": 0,
-  "volume": 1.0,
-  "preload": true,
-  "bitRate": 128,
-  "sampleRate": 44100,
-  "type": 0,
-  "bitDepth": 1,
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "mus_toppins",
   "audioGroupId": {
     "name": "audiogroup_default",
-    "path": "audiogroups/audiogroup_default"
+    "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "mus_toppins.wav",
+  "bitDepth": 1,
+  "bitRate": 128,
+  "compression": 0,
+  "conversionMode": 0,
   "duration": 128.026,
   "parent": {
     "name": "Sounds",
-    "path": "folders/Sounds.yy"
+    "path": "folders/Sounds.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "mus_toppins",
-  "tags": [],
-  "resourceType": "GMSound"
+  "preload": true,
+  "sampleRate": 44100,
+  "soundFile": "mus_toppins.wav",
+  "type": 0,
+  "volume": 1.0,
 }

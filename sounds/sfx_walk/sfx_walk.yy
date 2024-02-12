@@ -1,24 +1,23 @@
 {
-  "conversionMode": 0,
-  "compression": 2,
-  "volume": 0.28,
-  "preload": true,
-  "bitRate": 128,
-  "sampleRate": 44100,
-  "type": 0,
-  "bitDepth": 1,
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "sfx_walk",
   "audioGroupId": {
     "name": "audiogroup_default",
-    "path": "audiogroups/audiogroup_default"
+    "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "sfx_walk.ogg",
+  "bitDepth": 1,
+  "bitRate": 128,
+  "compression": 2,
+  "conversionMode": 0,
   "duration": 0.15,
   "parent": {
     "name": "Sounds",
-    "path": "folders/Sounds.yy"
+    "path": "folders/Sounds.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sfx_walk",
-  "tags": [],
-  "resourceType": "GMSound"
+  "preload": true,
+  "sampleRate": 44100,
+  "soundFile": "sfx_walk.ogg",
+  "type": 0,
+  "volume": 0.28,
 }
