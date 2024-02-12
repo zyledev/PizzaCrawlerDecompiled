@@ -1,4 +1,4 @@
 normalspr = "a"
 panicspr = "a"
-set = 0
+set = false
 imgspeed = 1
