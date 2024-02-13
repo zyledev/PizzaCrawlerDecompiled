@@ -12,3 +12,25 @@ enum states
 	empty,
 	noclip
 }
+
+enum enemystates
+{
+	normal,
+	attack,
+	chase,
+	panic,
+	controlled
+}
+
+enum curdir
+{
+	left, // 0
+	right, // 1
+	up, // 2
+	upright, // 3
+	upleft, // 4
+	down, // 5
+	downright, // 6
+	downleft // 7
+
+}

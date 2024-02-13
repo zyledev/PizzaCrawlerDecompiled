@@ -14,14 +14,14 @@ if menu
         {
             menu = 0
             inputcooldown = 60
-            set_state((0 << 0))
+            set_state(states.normal)
             cooldown = 180
         }
         else if select == 2
         {
             menu = 0
             cooldown = 180
-            set_state((0 << 0))
+            set_state(states.normal)
             global.leveltosave = "longchallengeleveljustfordemo"
             if global.coop
             {

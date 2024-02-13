@@ -23,23 +23,23 @@ function enemynormal() //enemynormal
         if distance_to_object(instance_nearest(x, y, obj_player)) < 20 && attackcooldown < 0 && instance_nearest(x, y, obj_player).state != states.actor && instance_nearest(x, y, obj_player).state != states.cutscene && instance_nearest(x, y, obj_player).state != states.hurt
         {
             image_index = 1
-            if currentdirection == (2 << 0)
+            if currentdirection == curdir.up
                 sprite_index = spr_attackup
-            else if currentdirection == (3 << 0)
+            else if currentdirection == curdir.upright
                 sprite_index = spr_attackupright
-            else if currentdirection == (1 << 0)
+            else if currentdirection == curdir.right
                 sprite_index = spr_attackright
-            else if currentdirection == (6 << 0)
+            else if currentdirection == curdir.downright
                 sprite_index = spr_attackdownright
-            else if currentdirection == (5 << 0)
+            else if currentdirection == curdir.down
                 sprite_index = spr_attackdown
-            else if currentdirection == (7 << 0)
+            else if currentdirection == curdir.downleft
                 sprite_index = spr_attackdownleft
-            else if currentdirection == (0 << 0)
+            else if currentdirection == curdir.left
                 sprite_index = spr_attackleft
-            else if currentdirection == (4 << 0)
+            else if currentdirection == curdir.upleft
                 sprite_index = spr_attackupleft
-            state = (1 << 0)
+            state = enemystates.attack
             attackbuffer = 30
         }
     }
@@ -52,7 +52,7 @@ function enemyplayerchase() //enemyplayerchase
         sprite_index = spr_idle
         hsp = 0
         vsp = 0
-        currentdirection = (5 << 0)
+        currentdirection = curdir.down
         state = states.normal
     }
     if instance_nearest(x, y, obj_player).x > x && instance_nearest(x, y, obj_player).y == y
@@ -60,92 +60,92 @@ function enemyplayerchase() //enemyplayerchase
         sprite_index = spr_chaseright
         hsp = 2
         vsp = 0
-        currentdirection = (1 << 0)
+        currentdirection = curdir.right
     }
     else if instance_nearest(x, y, obj_player).x > x && instance_nearest(x, y, obj_player).y > y
     {
         sprite_index = spr_chasedownright
         hsp = 2
         vsp = 2
-        currentdirection = (6 << 0)
+        currentdirection = curdir.downright
     }
     else if instance_nearest(x, y, obj_player).x > x && instance_nearest(x, y, obj_player).y < y
     {
         sprite_index = spr_chaseupright
         hsp = 2
         vsp = -2
-        currentdirection = (3 << 0)
+        currentdirection = curdir.upright
     }
     else if instance_nearest(x, y, obj_player).x < x && instance_nearest(x, y, obj_player).y == y
     {
         sprite_index = spr_chaseleft
         hsp = -2
         vsp = 0
-        currentdirection = (0 << 0)
+        currentdirection = curdir.left
     }
     else if instance_nearest(x, y, obj_player).x < x && instance_nearest(x, y, obj_player).y > y
     {
         sprite_index = spr_chasedownleft
         hsp = -2
         vsp = 2
-        currentdirection = (7 << 0)
+        currentdirection = curdir.downleft
     }
     else if instance_nearest(x, y, obj_player).x < x && instance_nearest(x, y, obj_player).y < y
     {
         sprite_index = spr_chaseupleft
         hsp = -2
         vsp = -2
-        currentdirection = (4 << 0)
+        currentdirection = curdir.upleft
     }
     else if instance_nearest(x, y, obj_player).x == x && instance_nearest(x, y, obj_player).y > y
     {
         sprite_index = spr_chasedown
         hsp = 0
         vsp = 2
-        currentdirection = (5 << 0)
+        currentdirection = curdir.down
     }
     else if instance_nearest(x, y, obj_player).x == x && instance_nearest(x, y, obj_player).y < y
     {
         sprite_index = spr_chaseup
         hsp = 0
         vsp = -2
-        currentdirection = (2 << 0)
+        currentdirection = curdir.up
     }
     else if instance_nearest(x, y, obj_player).x == x && instance_nearest(x, y, obj_player).y == y
     {
         sprite_index = spr_idle
         hsp = 0
         vsp = 0
-        currentdirection = (5 << 0)
+        currentdirection = curdir.down
     }
     else
     {
         sprite_index = spr_idle
         hsp = 0
         vsp = 0
-        currentdirection = (5 << 0)
-        state = (0 << 0)
+        currentdirection = curdir.down
+        state = enemystates.normal
     }
     if distance_to_object(instance_nearest(x, y, obj_player)) < 20 && attackcooldown < 0 && instance_nearest(x, y, obj_player).state != states.actor && instance_nearest(x, y, obj_player).state != states.cutscene
     {
         image_index = 1
-        if currentdirection == (2 << 0)
+        if currentdirection == curdir.up
             sprite_index = spr_attackup
-        else if currentdirection == (3 << 0)
+        else if currentdirection == curdir.upright
             sprite_index = spr_attackupright
-        else if currentdirection == (1 << 0)
+        else if currentdirection == curdir.right
             sprite_index = spr_attackright
-        else if currentdirection == (6 << 0)
+        else if currentdirection == curdir.downright
             sprite_index = spr_attackdownright
-        else if currentdirection == (5 << 0)
+        else if currentdirection == curdir.down
             sprite_index = spr_attackdown
-        else if currentdirection == (7 << 0)
+        else if currentdirection == curdir.downleft
             sprite_index = spr_attackdownleft
-        else if currentdirection == (0 << 0)
+        else if currentdirection == curdir.left
             sprite_index = spr_attackleft
-        else if currentdirection == (4 << 0)
+        else if currentdirection == curdir.upleft
             sprite_index = spr_attackupleft
-        state = (1 << 0)
+        state = enemystates.attack
         attackbuffer = 30
     }
     else if distance_to_object(instance_nearest(x, y, obj_player)) > 180
@@ -153,8 +153,8 @@ function enemyplayerchase() //enemyplayerchase
         sprite_index = spr_idle
         hsp = 0
         vsp = 0
-        currentdirection = (5 << 0)
-        state = (0 << 0)
+        currentdirection = curdir.down
+        state = enemystates.normal
     }
 }
 
@@ -176,7 +176,7 @@ function enemyattack() //enemyattack
         attacking = false
         attackcooldown = 60
         sprite_index = spr_idle
-        state = (0 << 0)
+        state = enemystates.normal
     }
 }
 
@@ -186,25 +186,25 @@ function enemycontrolled() //enemycontrolled
     if (keyboard_check(key_right) || gamepad_axis_value(playernum, gp_axislh) > 0) && (!keyboard_check(key_left) || gamepad_axis_value(playernum, gp_axislh) < 0) && (!keyboard_check(key_up) || gamepad_axis_value(playernum, gp_axislv) < 0) && (!keyboard_check(key_down) || gamepad_axis_value(playernum, gp_axislv) > 0)
     {
         sprite_index = spr_moveright
-        currentdirection = (1 << 0)
+        currentdirection = curdir.right
         hsp = 2
     }
     else if (keyboard_check(key_left) || gamepad_axis_value(playernum, gp_axislh) < 0) && (!keyboard_check(key_right) || gamepad_axis_value(playernum, gp_axislh) > 0) && (!keyboard_check(key_up) || gamepad_axis_value(playernum, gp_axislv) < 0) && (!keyboard_check(key_down) || gamepad_axis_value(playernum, gp_axislv) > 0)
     {
         sprite_index = spr_moveleft
-        currentdirection = (0 << 0)
+        currentdirection = curdir.left
         hsp = -2
     }
     else if (keyboard_check(key_up) || gamepad_axis_value(playernum, gp_axislv) < 0) && (!keyboard_check(key_left) || gamepad_axis_value(playernum, gp_axislh) < 0) && (!keyboard_check(key_right) || gamepad_axis_value(playernum, gp_axislh) > 0) && (!keyboard_check(key_down) || gamepad_axis_value(playernum, gp_axislv) > 0)
     {
         sprite_index = spr_moveup
-        currentdirection = (2 << 0)
+        currentdirection = curdir.up
         vsp = -2
     }
     else if (keyboard_check(key_down) || gamepad_axis_value(playernum, gp_axislv) > 0) && (!keyboard_check(key_left) || gamepad_axis_value(playernum, gp_axislh) < 0) && (!keyboard_check(key_up) || gamepad_axis_value(playernum, gp_axislv) < 0) && (!keyboard_check(key_right) || gamepad_axis_value(playernum, gp_axislh) > 0)
     {
         sprite_index = spr_movedown
-        currentdirection = (5 << 0)
+        currentdirection = curdir.down
         vsp = 2
     }
     else
@@ -219,21 +219,21 @@ function enemycontrolled() //enemycontrolled
             {
                 hsp = 0
                 vsp = 0
-                if currentdirection == (2 << 0)
+                if currentdirection == curdir.up
                     sprite_index = spr_attackup
-                else if currentdirection == (3 << 0)
+                else if currentdirection == curdir.upright
                     sprite_index = spr_attackupright
-                else if currentdirection == (1 << 0)
+                else if currentdirection == curdir.right
                     sprite_index = spr_attackright
-                else if currentdirection == (6 << 0)
+                else if currentdirection == curdir.downright
                     sprite_index = spr_attackdownright
-                else if currentdirection == (5 << 0)
+                else if currentdirection == curdir.down
                     sprite_index = spr_attackdown
-                else if currentdirection == (7 << 0)
+                else if currentdirection == curdir.downleft
                     sprite_index = spr_attackdownleft
-                else if currentdirection == (0 << 0)
+                else if currentdirection == curdir.left
                     sprite_index = spr_attackleft
-                else if currentdirection == (4 << 0)
+                else if currentdirection == curdir.upleft
                     sprite_index = spr_attackupleft
             }
             if sprite_index == spr_attackup || sprite_index == spr_attackdown || sprite_index == spr_attackleft || sprite_index == spr_attackright

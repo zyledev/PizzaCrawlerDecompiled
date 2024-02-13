@@ -1,23 +1,23 @@
 if escape
 {
     if !global.panic
-        state = (3 << 0)
+        state = enemystates.panic
 }
 switch state
 {
-    case (0 << 0):
+    case enemystates.normal: // 0
         enemynormal()
         break
-    case (2 << 0):
+    case enemystates.chase: // 2
         enemyplayerchase()
         break
-    case (1 << 0):
+    case enemystates.attack: // 1
         enemyattack()
         break
-    case (4 << 0):
+    case enemystates.controlled: // 4
         enemycontrolled()
         break
-    case (3 << 0):
+    case enemystates.panic: // 3
         if !global.panic
         {
             hsp = 0
@@ -27,7 +27,7 @@ switch state
         else if global.panic
         {
             visible = true
-            state = (0 << 0)
+            state = enemystates.normal
         }
         break
 }
