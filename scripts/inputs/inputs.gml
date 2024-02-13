@@ -1,26 +1,26 @@
 function scr_initinput() //scr_initinput
 {
     ini_open("settings.ini")
-    global.key_up = ini_read_string("Controls", "up", 38)
-    global.key_down = ini_read_string("Controls", "down", 40)
-    global.key_right = ini_read_string("Controls", "right", 39)
-    global.key_left = ini_read_string("Controls", "left", 37)
-    global.key_mach = ini_read_string("Controls", "mach", 16)
-    global.key_punch = ini_read_string("Controls", "punch", 90)
-    global.key_interact = ini_read_string("Controls", "interact", 88)
-    global.key_up2 = ini_read_string("ControlsP2", "up", 87)
-    global.key_down2 = ini_read_string("ControlsP2", "down", 83)
-    global.key_right2 = ini_read_string("ControlsP2", "right", 68)
-    global.key_left2 = ini_read_string("ControlsP2", "left", 65)
-    global.key_mach2 = ini_read_string("ControlsP2", "mach", 74)
-    global.key_punch2 = ini_read_string("ControlsP2", "punch", 75)
-    global.key_interact2 = ini_read_string("ControlsP2", "interact", 76)
+    global.key_up = ini_read_string("Controls", "up", vk_up)
+    global.key_down = ini_read_string("Controls", "down", vk_down)
+    global.key_right = ini_read_string("Controls", "right", vk_right)
+    global.key_left = ini_read_string("Controls", "left", vk_left)
+    global.key_mach = ini_read_string("Controls", "mach", vk_shift)
+    global.key_punch = ini_read_string("Controls", "punch", ord("Z"))
+    global.key_interact = ini_read_string("Controls", "interact", ord("X"))
+    global.key_up2 = ini_read_string("ControlsP2", "up", ord("W"))
+    global.key_down2 = ini_read_string("ControlsP2", "down", ord("S"))
+    global.key_right2 = ini_read_string("ControlsP2", "right", ord("D"))
+    global.key_left2 = ini_read_string("ControlsP2", "left", ord("A"))
+    global.key_mach2 = ini_read_string("ControlsP2", "mach", ord("J"))
+    global.key_punch2 = ini_read_string("ControlsP2", "punch", ord("K"))
+    global.key_interact2 = ini_read_string("ControlsP2", "interact", ord("L"))
     ini_close()
 }
 
 function scr_getinput() //scr_getinput
 {
-    if (object_index == obj_player)
+    if object_index == obj_player
     {
         key_up = global.key_up
         key_down = global.key_down
@@ -30,7 +30,7 @@ function scr_getinput() //scr_getinput
         key_punch = global.key_punch
         key_interact = global.key_interact
     }
-    else if (object_index == obj_player2 || object_index == obj_player2cursor || object_index == obj_enemy)
+    else if object_index == obj_player2 || object_index == obj_player2cursor || object_index == obj_enemy
     {
         key_up = global.key_up2
         key_down = global.key_down2

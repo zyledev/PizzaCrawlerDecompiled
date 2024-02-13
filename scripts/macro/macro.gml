@@ -1,2 +1,2 @@
-global.pausedisable = 0
-global.pausedisable2 = 0
+global.pausedisable = false
+global.pausedisable2 = false

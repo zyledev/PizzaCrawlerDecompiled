@@ -7,7 +7,7 @@ function sprite_get_pixel(argument0, argument1, argument2, argument3) //sprite_g
         draw_sprite(argument0, argument1, 0, 0)
         surface_reset_target()
         var pixel = surface_getpixel(surface, argument2, argument3)
-        var red = (pixel & 255)
+        var red = pixel & 255
         var green = ((pixel >> 8) & 255)
         var blue = ((pixel >> 16) & 255)
         return [red, green, blue];

@@ -1,6 +1,6 @@
-function scr_keytostring(argument0) //scr_keytostring
+function scr_keytostring(key) //scr_keytostring
 {
-    switch argument0
+    switch key
     {
         case 65:
             return "A";

@@ -1,6 +1,6 @@
 function characterspr() //characterspr
 {
-    if (character == "G" && (!global.cheeseslimemode))
+    if character == "G" && !global.cheeseslimemode
     {
         spr_idle = spr_gustavo_idle
         spr_idledown = spr_gustavo_idle
@@ -50,7 +50,7 @@ function characterspr() //characterspr
         spr_hurtup = spr_gustavo_up_hurt
         spr_hurtupleft = spr_gustavo_leftup_hurt
     }
-    if (character == "B" && (!global.cheeseslimemode))
+    if character == "B" && !global.cheeseslimemode
     {
         spr_idle = spr_brick_idle
         spr_idledown = spr_brick_idle
