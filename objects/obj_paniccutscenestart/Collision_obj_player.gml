@@ -1,4 +1,4 @@
-if other.object_index != obj_player2 && instance_exists(obj_pedestal) && obj_player.state != (5 << 0) && obj_player.state != (2 << 0)
+if other.object_index != obj_player2 && instance_exists(obj_pedestal) && obj_player.state != (5 << 0) && obj_player.state != states.actor
 {
     with other
     {

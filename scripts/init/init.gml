@@ -114,11 +114,11 @@ function alldepthset() //alldepthset
     depthset(obj_torch)
 }
 
-function set_state(argument0) //set_state
+function set_state(state) //set_state
 {
-    obj_player.state = argument0
+    obj_player.state = state
     if global.coop
-        obj_player2.state = argument0
+        obj_player2.state = state
 }
 
 function draw_textbox() //draw_textbox

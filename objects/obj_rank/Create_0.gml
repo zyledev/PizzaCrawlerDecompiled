@@ -2,9 +2,9 @@ tilex = 0
 tiley = 0
 image_speed = 0.2
 displayrank = false
-obj_player.state = (2 << 0)
+obj_player.state = states.actor
 if instance_exists(obj_player2)
-    obj_player2.state = (2 << 0)
+    obj_player2.state = states.actor
 spr_idle = spr_rankG_idle
 displaypoints = 0
 pointtimer = 180

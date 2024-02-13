@@ -20,7 +20,7 @@ if text == "INSUFFICIENT FUNDS!"
 if challenge && active && !ishubroom()
 {
     chachingbuffer--
-    obj_player.state = (2 << 0)
+    obj_player.state = states.actor
     with obj_player
     {
         if ((keyboard_check(key_punch) || gamepad_button_check(playernum, gp_face1)) && (!global.pausedisable) && other.chachingbuffer <= 0 && global.points >= 25)

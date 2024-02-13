@@ -2,7 +2,7 @@ if keyboard_check(key_interact) || gamepad_button_check(playernum, gp_face2) && 
 {
     if !other.gavepoints
     {
-        state = (2 << 0)
+        state = states.actor
         sprite_index = spr_peace
         if !audio_is_playing(sfx_keygot)
             audio_play_sound(sfx_keygot, 3, false)

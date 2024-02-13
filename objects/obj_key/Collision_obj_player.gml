@@ -1,4 +1,4 @@
-other.state = (2 << 0)
+other.state = states.actor
 other.sprite_index = other.spr_peace
 other.haskey = true
 other.keytimer = 70

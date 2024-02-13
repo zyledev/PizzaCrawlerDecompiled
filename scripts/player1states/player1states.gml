@@ -226,7 +226,7 @@ function scr_player_actor() //scr_player_actor
             if place_meeting(x, y, obj_interacthitboxp2)
             {
                 hp = maxhp
-                obj_player2.state = (2 << 0)
+                obj_player2.state = states.actor
                 obj_player2.visible = false
                 image_index = 0
                 sprite_index = spr_gusbrick_highfive
@@ -235,7 +235,7 @@ function scr_player_actor() //scr_player_actor
         else if place_meeting(x, y, obj_interacthitbox)
         {
             hp = maxhp
-            obj_player.state = (2 << 0)
+            obj_player.state = states.actor
             obj_player.visible = false
             image_index = 0
             sprite_index = spr_gusbrick_highfive

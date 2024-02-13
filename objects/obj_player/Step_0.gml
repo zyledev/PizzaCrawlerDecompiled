@@ -19,7 +19,7 @@ switch state
     case states.mach:
         scr_player_mach()
         break
-    case (2 << 0):
+    case states.actor:
         scr_player_actor()
         break
     case (3 << 0):
@@ -81,7 +81,7 @@ if global.classicmode
 }
 else
     move_and_collide(_xinput * movespeed, _yinput * movespeed, obj_solid)
-if keyboard_check(key_interact) || gamepad_button_check(playernum, gp_face2) && !global.pausedisable2 && state != (2 << 0)
+if keyboard_check(key_interact) || gamepad_button_check(playernum, gp_face2) && !global.pausedisable2 && state != states.actor
 {
     if object_index == obj_player
     {
@@ -134,7 +134,7 @@ if keyboard_check(key_up) || gamepad_axis_value(playernum, gp_axislv) < 0
     uppress = true
 else
     uppress = false
-if hp <= 0 && !global.coop && state != (2 << 0)
+if hp <= 0 && !global.coop && state != states.actor
 {
     movespeed = 0
     visible = false
@@ -143,13 +143,13 @@ if hp <= 0 && !global.coop && state != (2 << 0)
         sprite_index = obj_player.spr_dead
         image_index = 0
     }
-    state = (2 << 0)
+    state = states.actor
 }
-else if global.coop && hp <= 0 && state != (2 << 0)
+else if global.coop && hp <= 0 && state != states.actor
 {
     movespeed = 0
     sprite_index = spr_sleep
-    state = (2 << 0)
+    state = states.actor
 }
 palswapcooldown--
 if palselect == 0
@@ -157,7 +157,7 @@ if palselect == 0
 if instance_exists(obj_camera)
 {
     if obj_camera.follow != obj_player
-        state = (2 << 0)
+        state = states.actor
 }
 if global.cheeseslimemode
     maxhp = 1
@@ -173,7 +173,7 @@ if object_index == obj_player2
 if ishubroom()
     stamina = 20
 if room == rm_levelselect
-    state = (2 << 0)
+    state = states.actor
 if invincibility
     image_alpha = 0.5
 iframes--

@@ -4,4 +4,4 @@ tilex = 1
 tiley = 1
 scrollspr = spr_pause_bg
 drawsplash = 0
-set_state((2 << 0))
+set_state(states.actor)
