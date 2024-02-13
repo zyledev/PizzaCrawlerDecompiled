@@ -57,9 +57,9 @@ function instance_create_unique(argument0, argument1, argument2) //instance_crea
 function ishubroom() //ishubroom
 {
     if (room == rm_hub1 || room == rm_hub_1 || room == Tutorial_1 || room == rm_levelselect || room == rm_credits || room == rm_hub_lounge)
-        return 1;
+        return true;
     else
-        return 0;
+        return false;
 }
 
 function globalplayerreset() //globalplayerreset

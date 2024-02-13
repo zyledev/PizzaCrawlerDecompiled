@@ -1,2 +1,2 @@
-cooldown = 0
+cooldown = false
 image_speed = 0.2

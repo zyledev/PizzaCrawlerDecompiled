@@ -1,1 +1,1 @@
-global.coop = 0
+global.coop = false

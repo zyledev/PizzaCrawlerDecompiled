@@ -1,3 +1,3 @@
 y = ystart
-global.coop = 1
+global.coop = true
 obj_start.startgame = 1

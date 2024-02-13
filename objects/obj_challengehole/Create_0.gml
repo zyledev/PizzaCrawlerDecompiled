@@ -1,5 +1,5 @@
 ini_open("savedata.ini")
-if (ini_read_string("pizzadungeon", "beaten", "false") != "true")
+if ini_read_string("pizzadungeon", "beaten", "false") != "true"
     instance_destroy()
 ini_close()
 menu = 0

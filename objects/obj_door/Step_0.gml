@@ -1,14 +1,14 @@
-if (opened == 1)
+if opened
     sprite_index = spr_dungeon_door
-else if (locked == 0 && opened == 0)
+else if !locked && !opened
     sprite_index = spr_dungeon_doorclose
-if (opened == 1)
+if opened
     mask_index = spr_null
-if (opened == 0)
+if !opened
     depth = -4
 else
     depth = -6
-if (locked == 1 && opened == 0)
+if locked && !opened
 {
     sprite_index = spr_dungeon_doorlock
     mask_index = spr_door_closed

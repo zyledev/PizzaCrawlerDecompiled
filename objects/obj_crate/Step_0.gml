@@ -1,9 +1,9 @@
-if (hp <= 0)
+if hp <= 0
     instance_destroy()
 hurtable--
-if (hp == 2)
+if hp == 2
     sprite_index = spr_crate
-else if (hp == 1)
+else if hp == 1
     sprite_index = spr_crate
 else
     sprite_index = spr_crate

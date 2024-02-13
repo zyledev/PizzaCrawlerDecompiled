@@ -1,6 +1,6 @@
 camWidth = 480
 camHeight = 270
-follow = 66
+follow = obj_player
 xTo = x
 yTo = y
 min_view_x = 0

@@ -156,7 +156,7 @@ if (palselect == 0)
     palselect = 1
 if instance_exists(obj_camera)
 {
-    if (obj_camera.follow != 66)
+    if (obj_camera.follow != obj_player)
         state = (2 << 0)
 }
 if global.cheeseslimemode

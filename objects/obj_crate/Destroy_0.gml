@@ -1,9 +1,9 @@
 audio_play_sound(sfx_cratebreak, 3, false)
 for (var i = 0; i < 4; i++)
 {
-    if (!destroytiles)
+    if !destroytiles
     {
-        with (instance_create_layer(x, y, "Instances", obj_lock_dead))
+        with instance_create_layer(x, y, "Instances", obj_lock_dead)
         {
             sprite_index = spr_crate_debris
             image_index = i
@@ -11,7 +11,7 @@ for (var i = 0; i < 4; i++)
     }
     else
     {
-        with (instance_create_layer(x, y, "Instances", obj_lock_dead))
+        with instance_create_layer(x, y, "Instances", obj_lock_dead)
         {
             sprite_index = spr_block_particles
             image_index = i
@@ -21,14 +21,14 @@ for (var i = 0; i < 4; i++)
 if destroytiles
 {
     var layers = []
-    if (room == rm_playtest)
+    if room == rm_playtest
     {
-        with (obj_editor)
+        with obj_editor
         {
             for (var layerr = 0; layerr < 5; layerr++)
             {
                 if layerprop[curroom][layerr][1]
-                    array_push(layers, ("Tiles_" + string((layerr + 1))))
+                    array_push(layers, "Tiles_" + string(layerr + 1))
             }
         }
     }

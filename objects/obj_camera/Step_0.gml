@@ -12,18 +12,18 @@ var _gridwidth = to_tile(room_width)
 var _gridheight = to_tile(room_height)
 global.AIgrid = mp_grid_create(0, 0, _gridwidth, _gridheight, 32, 32)
 mp_grid_add_instances(global.AIgrid, obj_solid, 0)
-if (!createdcameras)
+if !createdcameras
 {
     CreateCameras()
     createdcameras = 1
 }
 global.controllerinputcooldown--
-if (follow == 83)
+if follow == obj_exithole
 {
     anchor1timer--
-    if (anchor1timer <= 0)
+    if anchor1timer <= 0
     {
-        follow = 66
+        follow = obj_player
         obj_player.state = (0 << 0)
         if global.coop
             obj_player2.state = (0 << 0)
@@ -31,12 +31,12 @@ if (follow == 83)
 }
 if global.panic
 {
-    if (fill > 0)
+    if fill > 0
         fill -= 0.2
-    if (fill <= 0 && obj_player.hp > 0)
+    if fill <= 0 && obj_player.hp > 0
         obj_player.hp -= 0.016666666666666666
 }
-if (follow != 66 && global.coop)
-    follow = 66
+if follow != obj_player && global.coop
+    follow = obj_player
 if global.panic
     shakevalue = 0.3
