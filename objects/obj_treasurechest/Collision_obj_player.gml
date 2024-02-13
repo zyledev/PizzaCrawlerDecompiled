@@ -1,6 +1,6 @@
 with other
 {
-    if keyboard_check(key_interact) || gamepad_button_check(playernum, gp_face2) && !global.pausedisable2 && state == (0 << 0)
+    if keyboard_check(key_interact) || gamepad_button_check(playernum, gp_face2) && !global.pausedisable2 && state == states.normal
     {
         with other
         {

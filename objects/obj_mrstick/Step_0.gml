@@ -28,7 +28,7 @@ if challenge && active && !ishubroom()
             global.points -= 25
             audio_play_sound(sfx_chaching, 3, false, 2, -0.5)
             hp++
-            state = (0 << 0)
+            state = states.normal
             other.active = 0
             intbuffer = 25
         }
@@ -39,14 +39,14 @@ if challenge && active && !ishubroom()
         }
         else if ((keyboard_check(key_interact) || gamepad_button_check(playernum, gp_face2)) && (!global.pausedisable2))
         {
-            state = (0 << 0)
+            state = states.normal
             other.active = 0
             intbuffer = 25
         }
     }
     if (text == "INSUFFICIENT FUNDS!" && fundbuffer <= 0)
     {
-        obj_player.state = (0 << 0)
+        obj_player.state = states.normal
         active = 0
         text = "BUY AN HP UP?\nCOSTS 25 POINTS\n(PUNCH FOR YES  INTERACT FOR NO)"
         fundbuffer = 80

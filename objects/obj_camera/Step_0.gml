@@ -24,9 +24,9 @@ if follow == obj_exithole
     if anchor1timer <= 0
     {
         follow = obj_player
-        obj_player.state = (0 << 0)
+        obj_player.state = states.normal
         if global.coop
-            obj_player2.state = (0 << 0)
+            obj_player2.state = states.normal
     }
 }
 if global.panic

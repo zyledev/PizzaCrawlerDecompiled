@@ -11,7 +11,7 @@ if controlledid != noone && (keyboard_check(key_mach) || gamepad_button_check(pl
 {
     with controlledid
     {
-        state = (0 << 0)
+        state = states.normal
         other.controlledid = noone
     }
 }

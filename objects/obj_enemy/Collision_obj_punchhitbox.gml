@@ -5,12 +5,12 @@ if visible
     {
         if object_index == obj_punchhitbox
         {
-            if obj_player.state == (1 << 0)
+            if obj_player.state == states.mach
                 movespeed = 8
         }
         else if object_index == obj_punchhitboxp2
         {
-            if obj_player2.state == (1 << 0)
+            if obj_player2.state == states.mach
                 movespeed = 8
         }
     }

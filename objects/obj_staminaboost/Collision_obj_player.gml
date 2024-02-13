@@ -10,7 +10,7 @@ if ok
             ok = 0
             ready = 0
         }
-        if state == (1 << 0)
+        if state == states.mach
             movespeed = 7
     }
 }

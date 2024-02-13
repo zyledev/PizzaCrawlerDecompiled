@@ -53,7 +53,7 @@ function enemyplayerchase() //enemyplayerchase
         hsp = 0
         vsp = 0
         currentdirection = (5 << 0)
-        state = (0 << 0)
+        state = states.normal
     }
     if instance_nearest(x, y, obj_player).x > x && instance_nearest(x, y, obj_player).y == y
     {

@@ -1,6 +1,6 @@
 function player_reset() //player_reset
 {
-    state = (0 << 0)
+    state = states.normal
     playerhp = 3
     stamina = maxstamina
     global.panic = false

@@ -13,10 +13,10 @@ if !palgenerated || palselect != prevpalselect
 }
 switch state
 {
-    case (0 << 0):
+    case states.normal:
         scr_player_normal()
         break
-    case (1 << 0):
+    case states.mach:
         scr_player_mach()
         break
     case (2 << 0):
@@ -104,10 +104,10 @@ if stamina < 0
     stamina = 0
 if playerhp > 3
     playerhp = 3
-if state == (1 << 0) || state == (3 << 0)
+if state == states.mach || state == (3 << 0)
 {
     if stamina <= 0
-        state = (0 << 0)
+        state = states.normal
     stamina -= 0.1
 }
 else
@@ -166,7 +166,7 @@ if !place_meeting(x, y, obj_shoparea)
 if state == (5 << 0) && !audio_is_playing(sfx_keygot) && sprite_index == spr_gustavo_treasure
 {
     movespeed = 2
-    state = (0 << 0)
+    state = states.normal
 }
 if object_index == obj_player2
     palselect = 1
@@ -212,7 +212,7 @@ if global.debug
     if keyboard_check_released(vk_f5) && state != (8 << 0)
         state = (8 << 0)
     else if keyboard_check_released(vk_f5) && state == (8 << 0)
-        state = (0 << 0)
+        state = states.normal
 }
 if keyboard_check(vk_f10)
     global.debug = true

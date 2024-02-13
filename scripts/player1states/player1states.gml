@@ -64,7 +64,7 @@ function scr_player_normal() //scr_player_normal
     if (keyboard_check(key_mach) || gamepad_button_check(playernum, gp_shoulderr)) && sprite_index != spr_idle && stamina >= 10
     {
         movespeed = 4
-        state = (1 << 0)
+        state = states.mach
         if object_index != obj_player2
             instance_create_layer(x, y, "Instances", obj_punchhitbox)
         else
@@ -196,7 +196,7 @@ function scr_player_mach() //scr_player_mach
         sprite_index = spr_idle
     if !(keyboard_check(key_mach) || gamepad_button_check(playernum, gp_shoulderr)) || sprite_index == spr_idle
     {
-        state = (0 << 0)
+        state = states.normal
         movespeed = 2
     }
     if !audio_is_playing(sfx_run) && sprite_index != spr_idle
@@ -215,7 +215,7 @@ function scr_player_actor() //scr_player_actor
     if !audio_is_playing(sfx_keygot) && sprite_index == spr_peace
     {
         movespeed = 2
-        state = (0 << 0)
+        state = states.normal
         hspeed = 0
         sprite_index = spr_idle
     }
@@ -245,8 +245,8 @@ function scr_player_actor() //scr_player_actor
     {
         if floor(image_index) == (image_number - 1)
         {
-            obj_player2.state = (0 << 0)
-            obj_player.state = (0 << 0)
+            obj_player2.state = states.normal
+            obj_player.state = states.normal
             obj_player2.visible = true
             obj_player.visible = true
         }
@@ -261,7 +261,7 @@ function scr_player_punch() //scr_player_punch
     {
         sprite_index = spr_idle
         movespeed = 2
-        state = (0 << 0)
+        state = states.normal
     }
     if audio_is_playing(sfx_walk)
         audio_stop_sound(sfx_walk)
@@ -295,7 +295,7 @@ function scr_player_hurt() //scr_player_hurt
     {
         sprite_index = spr_idle
         hp--
-        state = (0 << 0)
+        state = states.normal
     }
 }
 
@@ -327,7 +327,7 @@ function scr_player_cutscene() //scr_player_cutscene
                 obj_camera.fill = 5000
             instance_create_layer(x, -999, "Instances", obj_escapetext)
             sprite_index = spr_idle
-            state = (0 << 0)
+            state = states.normal
             if global.coop
             {
                 obj_player2.x = obj_player.x
