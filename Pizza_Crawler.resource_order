@@ -533,6 +533,5 @@
     {"name":"ts_tutorial","order":530,"path":"tilesets/ts_tutorial/ts_tutorial.yy",},
     {"name":"ts_counter_sprite","order":531,"path":"sprites/ts_counter_sprite/ts_counter_sprite.yy",},
     {"name":"ts_counter","order":532,"path":"tilesets/ts_counter/ts_counter.yy",},
-    {"name":"ReadMe","order":533,"path":"notes/ReadMe/ReadMe.yy",},
   ],
 }
