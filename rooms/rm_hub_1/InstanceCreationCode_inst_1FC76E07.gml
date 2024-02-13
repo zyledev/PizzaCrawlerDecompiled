@@ -1,1 +1,1 @@
-locked = 1
+locked = true

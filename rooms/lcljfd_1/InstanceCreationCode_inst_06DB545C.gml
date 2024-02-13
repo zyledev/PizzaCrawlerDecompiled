@@ -1,1 +1,1 @@
-challenge = 1
+challenge = true

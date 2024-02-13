@@ -1,3 +1,3 @@
-destroytiles = 1
+destroytiles = true
 visible = false
 challenge = 1

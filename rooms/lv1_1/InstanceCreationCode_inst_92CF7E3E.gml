@@ -1,1 +1,1 @@
-destroytiles = 1
+destroytiles = true

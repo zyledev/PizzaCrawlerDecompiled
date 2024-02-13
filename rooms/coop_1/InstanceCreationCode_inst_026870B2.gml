@@ -1,2 +1,2 @@
-locked = 1
+locked = true
 player = 2

@@ -1,5 +1,7 @@
 {
-  "FolderOrderSettings": [],
+  "FolderOrderSettings": [
+    {"name":"Levels","order":109,"path":"folders/Rooms/Levels.yy",},
+  ],
   "ResourceOrderSettings": [
     {"name":"obj_explosioneffect","order":1,"path":"objects/obj_explosioneffect/obj_explosioneffect.yy",},
     {"name":"obj_metalblock","order":2,"path":"objects/obj_metalblock/obj_metalblock.yy",},
@@ -96,16 +98,15 @@
     {"name":"rm_hub_1","order":93,"path":"rooms/rm_hub_1/rm_hub_1.yy",},
     {"name":"Tutorial_1","order":94,"path":"rooms/Tutorial_1/Tutorial_1.yy",},
     {"name":"rm_hub1","order":95,"path":"rooms/rm_hub1/rm_hub1.yy",},
-    {"name":"lv1_1","order":96,"path":"rooms/lv1_1/lv1_1.yy",},
+    {"name":"lv1_1","order":3,"path":"rooms/lv1_1/lv1_1.yy",},
     {"name":"rm_editor","order":97,"path":"rooms/rm_editor/rm_editor.yy",},
-    {"name":"lv_1_2","order":98,"path":"rooms/lv_1_2/lv_1_2.yy",},
+    {"name":"lv_1_2","order":2,"path":"rooms/lv_1_2/lv_1_2.yy",},
     {"name":"rm_playtest","order":99,"path":"rooms/rm_playtest/rm_playtest.yy",},
     {"name":"rm_levelselect","order":100,"path":"rooms/rm_levelselect/rm_levelselect.yy",},
-    {"name":"lcljfd_1","order":101,"path":"rooms/lcljfd_1/lcljfd_1.yy",},
+    {"name":"lcljfd_1","order":1,"path":"rooms/lcljfd_1/lcljfd_1.yy",},
     {"name":"rm_credits","order":102,"path":"rooms/rm_credits/rm_credits.yy",},
     {"name":"rm_pizzadungeonvs_1","order":103,"path":"rooms/rm_pizzadungeonvs_1/rm_pizzadungeonvs_1.yy",},
     {"name":"rm_ost","order":104,"path":"rooms/rm_ost/rm_ost.yy",},
-    {"name":"coop_1","order":105,"path":"rooms/coop_1/coop_1.yy",},
     {"name":"rm_rankroom","order":106,"path":"rooms/rm_rankroom/rm_rankroom.yy",},
     {"name":"rm_hub_lounge","order":107,"path":"rooms/rm_hub_lounge/rm_hub_lounge.yy",},
     {"name":"rm_outside_plains","order":108,"path":"rooms/rm_outside_plains/rm_outside_plains.yy",},

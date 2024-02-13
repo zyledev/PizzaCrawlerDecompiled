@@ -1,2 +1,2 @@
-destroytiles = 1
+destroytiles = true
 hp = 2

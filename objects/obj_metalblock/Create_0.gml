@@ -1,4 +1,4 @@
 hp = 3
 hurtable = 6
-destroytiles = 0
+destroytiles = false
 challenge = 0
