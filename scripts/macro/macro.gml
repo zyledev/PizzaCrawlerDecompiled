@@ -9,5 +9,6 @@ enum states
 	punch,
 	hurt,
 	cutscene,
-	
+	empty,
+	noclip
 }

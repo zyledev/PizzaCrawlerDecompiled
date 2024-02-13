@@ -13,27 +13,27 @@ if !palgenerated || palselect != prevpalselect
 }
 switch state
 {
-    case states.normal:
+    case states.normal: // 0
         scr_player_normal()
         break
-    case states.mach:
+    case states.mach: // 1
         scr_player_mach()
         break
-    case states.actor:
+    case states.actor: // 2
         scr_player_actor()
         break
-    case (3 << 0):
+    case states.punch: // 3
         scr_player_punch()
         break
-    case (4 << 0):
+    case states.hurt: // 4
         scr_player_hurt()
         break
-    case (5 << 0):
+    case states.cutscene: // 5
         scr_player_cutscene()
         break
-    case (7 << 0):
+    case states.empty: // 7
         break
-    case (8 << 0):
+    case states.noclip: // 8
         if keyboard_check(vk_up)
             y -= 5
         if keyboard_check(vk_down)
@@ -104,7 +104,7 @@ if stamina < 0
     stamina = 0
 if playerhp > 3
     playerhp = 3
-if state == states.mach || state == (3 << 0)
+if state == states.mach || state == states.punch
 {
     if stamina <= 0
         state = states.normal
@@ -163,7 +163,7 @@ if global.cheeseslimemode
     maxhp = 1
 if !place_meeting(x, y, obj_shoparea)
     global.useshoptheme = false
-if state == (5 << 0) && !audio_is_playing(sfx_keygot) && sprite_index == spr_gustavo_treasure
+if state == states.cutscene && !audio_is_playing(sfx_keygot) && sprite_index == spr_gustavo_treasure
 {
     movespeed = 2
     state = states.normal
@@ -209,9 +209,9 @@ if firetran
     palselect = 9
 if global.debug
 {
-    if keyboard_check_released(vk_f5) && state != (8 << 0)
-        state = (8 << 0)
-    else if keyboard_check_released(vk_f5) && state == (8 << 0)
+    if keyboard_check_released(vk_f5) && state != states.noclip
+        state = states.noclip
+    else if keyboard_check_released(vk_f5) && state == states.noclip
         state = states.normal
 }
 if keyboard_check(vk_f10)

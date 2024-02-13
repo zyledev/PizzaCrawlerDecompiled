@@ -4,7 +4,7 @@ if (keyboard_check(key_interact) || gamepad_button_check(playernum, gp_face2)) &
     with global.selectedcontrol
     {
         other.controlledid = id
-        state = (4 << 0)
+        state = states.hurt
     }
 }
 if controlledid != noone && (keyboard_check(key_mach) || gamepad_button_check(playernum, gp_shoulderr))
@@ -21,7 +21,7 @@ if instance_exists(obj_enemy)
 {
     with obj_enemy
     {
-        if state == (4 << 0)
+        if state == states.hurt
             other.baddiechangecooldown = 500
     }
 }

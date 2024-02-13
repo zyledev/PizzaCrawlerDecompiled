@@ -91,7 +91,7 @@ function scr_player_normal() //scr_player_normal
             sprite_index = spr_punchupleft
         image_index = 0
         audio_play_sound(sfx_punch, 2, false)
-        state = (3 << 0)
+        state = states.punch
         if object_index != obj_player2
         {
             with instance_create_layer(x, y, "Instances", obj_punchhitbox)

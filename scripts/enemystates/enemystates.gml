@@ -20,7 +20,7 @@ function enemynormal() //enemynormal
         sprite_index = spr_movedown
     if object_index != obj_cheeseslime
     {
-        if distance_to_object(instance_nearest(x, y, obj_player)) < 20 && attackcooldown < 0 && instance_nearest(x, y, obj_player).state != states.actor && instance_nearest(x, y, obj_player).state != (5 << 0) && instance_nearest(x, y, obj_player).state != (4 << 0)
+        if distance_to_object(instance_nearest(x, y, obj_player)) < 20 && attackcooldown < 0 && instance_nearest(x, y, obj_player).state != states.actor && instance_nearest(x, y, obj_player).state != states.cutscene && instance_nearest(x, y, obj_player).state != states.hurt
         {
             image_index = 1
             if currentdirection == (2 << 0)
@@ -47,7 +47,7 @@ function enemynormal() //enemynormal
 
 function enemyplayerchase() //enemyplayerchase
 {
-    if instance_nearest(x, y, obj_player).state == states.actor || instance_nearest(x, y, obj_player).state == (4 << 0) || instance_nearest(x, y, obj_player).state != (5 << 0)
+    if instance_nearest(x, y, obj_player).state == states.actor || instance_nearest(x, y, obj_player).state == states.hurt || instance_nearest(x, y, obj_player).state != states.cutscene
     {
         sprite_index = spr_idle
         hsp = 0
@@ -126,7 +126,7 @@ function enemyplayerchase() //enemyplayerchase
         currentdirection = (5 << 0)
         state = (0 << 0)
     }
-    if distance_to_object(instance_nearest(x, y, obj_player)) < 20 && attackcooldown < 0 && instance_nearest(x, y, obj_player).state != states.actor && instance_nearest(x, y, obj_player).state != (5 << 0)
+    if distance_to_object(instance_nearest(x, y, obj_player)) < 20 && attackcooldown < 0 && instance_nearest(x, y, obj_player).state != states.actor && instance_nearest(x, y, obj_player).state != states.cutscene
     {
         image_index = 1
         if currentdirection == (2 << 0)

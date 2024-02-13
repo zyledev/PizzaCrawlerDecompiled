@@ -1,2 +1,2 @@
-if player.state == states.mach && other.state != (3 << 0)
+if player.state == states.mach && other.state != states.punch
     player.movespeed = 8

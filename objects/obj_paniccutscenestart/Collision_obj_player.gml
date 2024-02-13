@@ -1,8 +1,8 @@
-if other.object_index != obj_player2 && instance_exists(obj_pedestal) && obj_player.state != (5 << 0) && obj_player.state != states.actor
+if other.object_index != obj_player2 && instance_exists(obj_pedestal) && obj_player.state != states.cutscene && obj_player.state != states.actor
 {
     with other
     {
-        state = (5 << 0)
+        state = states.cutscene
         var movetoward = point_direction(obj_player.x, obj_player.y, obj_pedestal.x, obj_pedestal.y)
         if (movetoward + 22.5) % 360 >= 0 && (movetoward + 22.5) % 360 < 45
             sprite_index = spr_moveright
