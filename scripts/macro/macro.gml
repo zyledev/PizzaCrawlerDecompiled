@@ -34,3 +34,11 @@ enum curdir
 	downleft // 7
 
 }
+
+enum facedir
+{
+	left,
+	right,
+	up,
+	down
+}

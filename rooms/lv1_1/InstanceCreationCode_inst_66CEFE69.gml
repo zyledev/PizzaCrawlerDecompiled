@@ -1,1 +1,1 @@
-facedirection = (0 << 0)
+facedirection = facedir.left

@@ -1,2 +1,2 @@
-facedirection = (5 << 0)
+facedirection = facedir.down
 collectablenum = 4

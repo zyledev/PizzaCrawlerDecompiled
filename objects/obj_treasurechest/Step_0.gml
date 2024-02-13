@@ -1,19 +1,19 @@
 scr_getinput()
 switch facedirection
 {
-    case (5 << 0): // 5
+    case facedir.down: // 5
         spr_idle = spr_chest_idle
         spr_open = spr_chestopen
         break
-    case (1 << 0): // 1
+    case facedir.right: // 1
         spr_idle = spr_chest_right_idle
         spr_open = spr_chest_right_open
         break
-    case (2 << 0): // 0
+    case facedir.up: // 2
         spr_idle = spr_chest_up_idle
         spr_open = spr_chest_up_open
         break
-    case (0 << 0): // 0
+    case facedir.left: // 0
         spr_idle = spr_chest_left_idle
         spr_open = spr_chest_left_open
         break
