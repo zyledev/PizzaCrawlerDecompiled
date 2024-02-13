@@ -1,2 +1,2 @@
-y = (ystart + 8)
+y = ystart + 8
 alarm[0] = 10

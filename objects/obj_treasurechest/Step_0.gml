@@ -19,32 +19,32 @@ switch facedirection
         break
 }
 
-if (sprite_index != spr_open)
+if sprite_index != spr_open
     sprite_index = spr_idle
-if (sprite_index == spr_open)
+if sprite_index == spr_open
 {
-    if (floor(image_index) == (image_number - 1))
+    if floor(image_index) == (image_number - 1)
     {
         image_index = 2
         image_speed = 0
     }
 }
-if (instance_nearest(x, y, obj_player).object_index != obj_player2)
+if instance_nearest(x, y, obj_player).object_index != obj_player2
 {
-    if (obj_player.sprite_index == obj_player.spr_peace && distance_to_object(obj_player) < 20)
+    if obj_player.sprite_index == obj_player.spr_peace && distance_to_object(obj_player) < 20
     {
-        if (gavepoints == 0)
+        if !gavepoints
         {
             global.points += 200
-            gavepoints = 1
+            gavepoints = true
         }
     }
 }
-else if (obj_player2.sprite_index == obj_player2.spr_peace && distance_to_object(obj_player2) < 20)
+else if obj_player2.sprite_index == obj_player2.spr_peace && distance_to_object(obj_player2) < 20
 {
-    if (gavepoints == 0)
+    if !gavepoints
     {
         global.points += 200
-        gavepoints = 1
+        gavepoints = true
     }
 }

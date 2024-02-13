@@ -1,5 +1,5 @@
 startgame = false;
-if (!variable_global_exists("actualstartgame"))
+if !variable_global_exists("actualstartgame")
 {
 	global.actualstartgame = true;
 	global.sprites = [];
@@ -51,7 +51,7 @@ if (!variable_global_exists("actualstartgame"))
 }
 image_speed = 0.2;
 ini_open("savedata.ini");
-global.level1unlock = ini_read_real("levelunlocks", "levelone", 0);
+global.level1unlock = ini_read_real("levelunlocks", "levelone", false);
 global.challengemodeunlock = ini_read_string("pizzadungeon", "beaten", "false");
 ini_close();
 ini_open("settings.ini");
@@ -63,6 +63,6 @@ global.shopoverride = false;
 global.points = 0;
 global.saveroom = ds_list_create();
 global.leveltosave = "hub1";
-global.mute = 0;
+global.mute = false;
 global.controllerinputcooldown = 10;
 scr_initinput();

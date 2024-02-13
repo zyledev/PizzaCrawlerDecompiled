@@ -1,4 +1,4 @@
-if (!global.challengemodeunlock)
+if !global.challengemodeunlock
     instance_destroy()
 depth = -5
 sprite_index = spr_cheeseslime_idle
@@ -6,25 +6,25 @@ statess =
 {
     idle: 
     {
-        left: 184,
-        right: 258,
-        down: 28,
-        up: 147
+        left: spr_cheeseslime_left_idle,
+        right: spr_cheeseslime_right_idle,
+        down: spr_cheeseslime_idle,
+        up: spr_cheeseslime_up_idle
     },
     walk: 
     {
-        left: 58,
-        right: 103,
-        down: 102,
-        up: 77
+        left: spr_cheeseslime_left,
+        right: spr_cheeseslime_right,
+        down: spr_cheeseslime_move,
+        up: spr_cheeseslime_up
     },
     dead: 
     {
-        left: 256,
-        right: 256,
-        down: 256,
-        up: 256
+        left: spr_noise_dead,
+        right: spr_noise_dead,
+        down: spr_noise_dead,
+        up: spr_noise_dead
     }
 }
 
-noise = 0
+noise = false

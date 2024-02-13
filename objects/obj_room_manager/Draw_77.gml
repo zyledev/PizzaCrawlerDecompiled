@@ -1,8 +1,8 @@
-if (global.darkness && room != Titlescreen)
+if global.darkness && room != Titlescreen
 {
     draw_surface(application_surface, 0, 0)
     draw_set_alpha(0.75)
-    if (!global.coop)
+    if !global.coop
         draw_surface_stretched(light_surface, 0, 0, window_get_width(), window_get_height())
     else
     {

@@ -1,10 +1,10 @@
-set = 0
-loop = 0
-mutebg = 0
+set = false
+loop = false
+mutebg = false
 music = undefined
 player = undefined
-collideplayer = 0
+collideplayer = false
 volume = 1
 offset = 0
 pitch = 1
-musicshouldmute = 0
+musicshouldmute = false

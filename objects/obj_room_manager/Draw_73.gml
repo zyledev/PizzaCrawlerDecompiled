@@ -1,7 +1,7 @@
-if (global.darkness && room != Titlescreen)
+if global.darkness && room != Titlescreen
 {
     var camera = view_get_camera(0)
-    if (!surface_exists(light_surface))
+    if !surface_exists(light_surface)
     {
         var cam_width = camera_get_view_width(camera)
         var cam_height = camera_get_view_height(camera)
@@ -10,7 +10,7 @@ if (global.darkness && room != Titlescreen)
     if global.coop
     {
         var camera2 = view_get_camera(1)
-        if (!surface_exists(light_surface2))
+        if !surface_exists(light_surface2)
         {
             var cam_width2 = camera_get_view_width(camera2)
             var cam_height2 = camera_get_view_height(camera2)

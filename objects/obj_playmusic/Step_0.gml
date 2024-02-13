@@ -1,6 +1,6 @@
-if (!set)
+if !set
 {
-	set = 1;
+	set = true;
 	music = scr_asset_get_index(music, 2);
 	loop = loop == "true" || loop == "1";
 	try
@@ -30,32 +30,32 @@ if (!set)
 }
 var _id = id;
 collideplayer = place_meeting(x, y, obj_player);
-var wbjh = 0;
-with (obj_playmusic)
+var wbjh = false;
+with obj_playmusic
 {
-	if (place_meeting(x, y, obj_player))
+	if place_meeting(x, y, obj_player)
 	{
-		if (mutebg && id != _id)
-			wbjh = 1;
+		if mutebg && id != _id
+			wbjh = true;
 	}
 }
 musicshouldmute = wbjh;
-if (!collideplayer && player)
+if !collideplayer && player
 {
 	audio_stop_sound(player);
 	player = undefined;
 }
-if (!musicshouldmute && (!collideplayer || !mutebg) && global.mute)
+if !musicshouldmute && (!collideplayer || !mutebg) && global.mute
 {
-	global.mute = 0;
-	global.shopoverride = 0;
-	if (global.useshoptheme)
+	global.mute = false;
+	global.shopoverride = false;
+	if global.useshoptheme
 		audio_resume_sound(mus_shop);
 	else
 	{
-		with (obj_editor)
+		with obj_editor
 		{
-			if (player)
+			if player
 				audio_resume_sound(player);
 			else
 				audio_resume_all();

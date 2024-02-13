@@ -1,4 +1,4 @@
-drawind = 0
+drawind = false
 text = "ERROR"
 active = false
 delay = 30

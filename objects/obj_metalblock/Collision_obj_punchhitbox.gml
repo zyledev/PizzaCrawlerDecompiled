@@ -1,4 +1,4 @@
-if (hurtable <= 0)
+if hurtable <= 0
 {
     hurtable = 12
     hp--

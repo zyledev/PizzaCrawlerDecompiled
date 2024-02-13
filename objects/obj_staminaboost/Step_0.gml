@@ -3,9 +3,9 @@ if ok
 else
     image_alpha = 0.25
 ready += 0.8
-if (ready >= 100)
-    ok = 1
+if ready >= 100
+    ok = true
 else
-    ok = 0
-if (ready >= 101)
+    ok = false
+if ready >= 101
     ready = 100

@@ -1,1 +1,1 @@
-inputlocked = 0
+inputlocked = false

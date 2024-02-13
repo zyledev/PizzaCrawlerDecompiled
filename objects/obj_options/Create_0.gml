@@ -2,7 +2,7 @@ playernum = 0
 tilex = 1
 tiley = 1
 select = 0
-if (!instance_exists(obj_pause))
+if !instance_exists(obj_pause)
 {
     instance_deactivate_all(true)
     instance_activate_object(obj_music)

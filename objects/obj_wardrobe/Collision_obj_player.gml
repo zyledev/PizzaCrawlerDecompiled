@@ -1,1 +1,1 @@
-drawtext = 1
+drawtext = true

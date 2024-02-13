@@ -1,4 +1,4 @@
-if (!global.challengemodeunlock)
+if !global.challengemodeunlock
     instance_destroy()
 sprite_index = spr_mrsock_idle
 depth = -5
@@ -6,25 +6,25 @@ statess =
 {
     idle: 
     {
-        left: 164,
-        right: 286,
-        down: 67,
-        up: 10
+        left: spr_mrsock_left_idle,
+        right: spr_mrsock_right_idle,
+        down: spr_mrsock_idle,
+        up: spr_mrsock_up_idle
     },
     walk: 
     {
-        left: 234,
-        right: 143,
-        down: 348,
-        up: 293
+        left: spr_mrsock_left,
+        right: spr_mrsock_right,
+        down: spr_mrsock_down,
+        up: spr_mrsock_up
     },
     dead: 
     {
-        left: 256,
-        right: 256,
-        down: 256,
-        up: 256
+        left: spr_noise_dead,
+        right: spr_noise_dead,
+        down: spr_noise_dead,
+        up: spr_noise_dead
     }
 }
 
-noise = 0
+noise = false

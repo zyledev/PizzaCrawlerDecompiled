@@ -1,1 +1,1 @@
-active = (!active)
+active = !active

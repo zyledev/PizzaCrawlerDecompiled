@@ -8,15 +8,15 @@ if audio_is_playing(songs[songplaying])
     draw_text_transformed(960, 95, string_concat("PLAYING: ", currentsong[songplaying]), 1.5, 1.5, 0)
 else
     draw_text_transformed(960, 95, "NOTHING IS PLAYING", 1.5, 1.5, 0)
-if (songselect <= array_length(currentsong))
+if songselect <= array_length(currentsong)
     draw_text_transformed(960, 960, currentsong[songselect], 1.5, 1.5, 0)
 else
     draw_text_transformed(960, 960, "ERROR", 2, 2, 0)
-if (songselect != (array_length(songs) - 1) && songselect != 0 && songselect != 1)
+if songselect != (array_length(songs) - 1) && songselect != 0 && songselect != 1
     draw_text(960, 1010, "BY THE NOSE")
-if (songselect == 0)
+if songselect == 0
     draw_text(960, 1010, "BY THE NOSE - ORIGINALLY BY DISCHU")
-if (songselect == 1)
+if songselect == 1
     draw_text(960, 1010, "BY THE NOSE - ORIGINALLY BY DAYPEECONE")
 draw_sprite_ext(spr_right, 0, 1632, 928, 2, 2, 0, c_white, 1)
 draw_sprite_ext(spr_left, 0, 224, 928, 2, 2, 0, c_white, 1)

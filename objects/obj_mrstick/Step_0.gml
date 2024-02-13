@@ -1,27 +1,27 @@
-if (!active)
+if !active
     currentChar = 1
-if (!active)
+if !active
     intbuffer--
 else
     intbuffer = 25
-if (distance_to_object(obj_player) > 30 && active)
+if distance_to_object(obj_player) > 30 && active
     active = 0
 if active
     sprite_index = talkspr
 else
     sprite_index = idlespr
-if (global.panic && (!panicking))
+if global.panic && !panicking
 {
-    panicking = 1
+    panicking = true
     text = panictext
 }
-if (text == "INSUFFICIENT FUNDS!")
+if text == "INSUFFICIENT FUNDS!"
     fundbuffer--
-if (challenge && active && (!ishubroom()))
+if challenge && active && !ishubroom()
 {
     chachingbuffer--
     obj_player.state = (2 << 0)
-    with (obj_player)
+    with obj_player
     {
         if ((keyboard_check(key_punch) || gamepad_button_check(playernum, gp_face1)) && (!global.pausedisable) && other.chachingbuffer <= 0 && global.points >= 25)
         {

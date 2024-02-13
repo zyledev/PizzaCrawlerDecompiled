@@ -1,4 +1,4 @@
 text = "THE AREA BEHIND ME IS UNDER CONSTRUCTION."
-active = 0
+active = false
 delay = 30
 currentChar = 1

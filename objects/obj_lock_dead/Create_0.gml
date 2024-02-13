@@ -23,11 +23,11 @@ if instance_exists(obj_player)
 }
 depth = -999
 gui = 0
-usepalette = 0
+usepalette = false
 paletteselect = 0
 palarray = []
 spr_pal = spr_gustavo_pal
-palgenerated = 0
+palgenerated = false
 palselect = 0
 prevpalselect = 0
 d = 255

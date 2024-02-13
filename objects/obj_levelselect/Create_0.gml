@@ -5,7 +5,7 @@ coolfactor = 20
 vertcool = 20
 floorselect = 0
 selectedlv = "hub1"
-if (room == rm_playtest)
+if room == rm_playtest
 {
     editorlevel = global.ugggghhhh[0]
     editorroom = global.ugggghhhh[1]
@@ -18,11 +18,11 @@ else
     editordoor = "A"
 }
 delay = 80
-if (room == rm_playtest)
+if room == rm_playtest
     global.leveltosave = (editorlevel + "_editor")
 else
     global.leveltosave = "pizzadungeon"
-set = 0
+set = false
 fakex = 0
 fakey = 0
 playernum = 0

@@ -1,2 +1,2 @@
-if (room == rm_credits)
+if room == rm_credits
     game_restart()

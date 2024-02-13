@@ -1,5 +1,5 @@
-y -= (0.5 * verticlespeed)
-if (image_alpha <= 0)
+y -= 0.5 * verticlespeed
+if image_alpha <= 0
     instance_destroy(id, false)
 switch sprite_index
 {

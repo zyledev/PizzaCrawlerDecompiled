@@ -1,2 +1,2 @@
-ok = 1
+ok = true
 ready = 100

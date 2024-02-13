@@ -1,4 +1,4 @@
-if (!global.panic)
+if !global.panic
 {
     image_alpha = 0.25
     mask_index = spr_null

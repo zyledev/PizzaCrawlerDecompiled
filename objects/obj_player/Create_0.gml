@@ -1,17 +1,17 @@
 scr_initinput()
 scr_getinput()
 ini_open("savedata.ini")
-isup = 0
-isright = 0
-isleft = 0
-isdown = 1
-isupleft = 0
-isupright = 0
-isdownright = 0
-isdownleft = 0
+isup = false
+isright = false
+isleft = false
+isdown = true
+isupleft = false
+isupright = false
+isdownright = false
+isdownleft = false
 palarray = []
 spr_pal = spr_gustavo_pal
-palgenerated = 0
+palgenerated = false
 palselect = ini_read_real("palette", "currentpalette", 1)
 prevpalselect = 0
 palswapcooldown = 10
@@ -31,9 +31,9 @@ movexright = 1
 moveydown = 1
 movespeed = 2
 depth = -5
-haskey = 0
+haskey = false
 keytimer = 0
-global.level1unlock = ini_read_real("levelunlocks", "levelone", 0)
+global.level1unlock = ini_read_real("levelunlocks", "levelone", false)
 global.challengemodeunlock = ini_read_string("pizzadungeon", "beaten", "false")
 ini_close()
 playernum = 0
@@ -42,12 +42,12 @@ vsp = 0
 hsp = 0
 movex = 0
 movey = 0
-global.cheeseslimemode = 0
+global.cheeseslimemode = false
 character = "G"
 characterspr()
 target_door = ""
 fill = 0
-if (room == rm_hub1 && global.coop && (!instance_exists(obj_player2)))
+if room == rm_hub1 && global.coop && !instance_exists(obj_player2)
     instance_create_layer(x, y, "Instances", obj_player2)
 global.killedbaddies = 0
 global.points = 0
@@ -56,6 +56,6 @@ global.leveltosave = "hub1"
 invincibility = 0
 iframes = 60
 dead = 0
-global.debug = 0
+global.debug = false
 global.treasuresprite = spr_lv1item
 firetran = 0

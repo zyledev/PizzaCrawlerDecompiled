@@ -1,3 +1,3 @@
 y = ystart
-if ((!locked) && active)
+if !locked && active
     obj_start.startgame = 2

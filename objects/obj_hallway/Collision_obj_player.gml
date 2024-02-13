@@ -1,12 +1,12 @@
-if (room == rm_playtest)
+if room == rm_playtest
 {
     var found = -1
-    with (obj_editor)
+    with obj_editor
     {
         var i = 0
-        while (i < array_length(rooms))
+        while i < array_length(rooms)
         {
-            if (rooms[i] == string_upper(other.target_room))
+            if rooms[i] == string_upper(other.target_room)
             {
                 found = i
                 break
@@ -14,11 +14,11 @@ if (room == rm_playtest)
             else
                 i++
         }
-        if (found > -1)
+        if found > -1
         {
             var origmu = mu[curroom]
             curroom = found
-            if (origmu != mu[curroom])
+            if origmu != mu[curroom]
             {
                 audio_stop_sound(player)
                 player = undefined
@@ -28,7 +28,7 @@ if (room == rm_playtest)
             room_goto(rm_playtest)
         }
     }
-    if (found < 0)
+    if found < 0
         return;
 }
 else
@@ -36,29 +36,29 @@ else
 if variable_instance_exists(id, "target_door")
 {
     target_door = string_upper(target_door)
-    with (obj_player)
+    with obj_player
         target_door = other.target_door
 }
 else
 {
-    with (obj_player)
+    with obj_player
     {
         x = other.targetx
         y = other.targety
     }
-    with (obj_camera)
+    with obj_camera
     {
         x = other.targetx
         y = other.targety
     }
 }
-if (room == Tutorial_1)
+if room == Tutorial_1
 {
-    other.haskey = 0
-    global.level1unlock = 1
-    if (!global.challengemodeunlock)
+    other.haskey = false
+    global.level1unlock = true
+    if !global.challengemodeunlock
     {
-        with (instance_create_layer(x, y, "Instances", obj_notif))
+        with instance_create_layer(x, y, "Instances", obj_notif)
             notiftext = "PIZZA DUNGEON UNLOCKED!"
     }
     ini_open("savedata.ini")

@@ -1,6 +1,6 @@
-if (escape == 1)
+if escape
 {
-    if (!global.panic)
+    if !global.panic
         state = (3 << 0)
 }
 switch state
@@ -18,7 +18,7 @@ switch state
         enemycontrolled()
         break
     case (3 << 0):
-        if (!global.panic)
+        if !global.panic
         {
             hsp = 0
             vsp = 0
@@ -32,10 +32,10 @@ switch state
         break
 }
 
-if (!(place_meeting((x + hsp), y, obj_solid)))
+if !place_meeting((x + hsp), y, obj_solid)
     x += hsp
-if (!(place_meeting(x, (y + vsp), obj_solid)))
+if !place_meeting(x, (y + vsp), obj_solid)
     y += vsp
 attackcooldown--
-if (hitboxid != noone && (!instance_exists(hitboxid)))
+if hitboxid != noone && !instance_exists(hitboxid)
     hitboxid = -4

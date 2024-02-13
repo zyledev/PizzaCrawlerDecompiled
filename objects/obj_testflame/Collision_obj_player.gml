@@ -1,1 +1,1 @@
-other.firetran = 1
+other.firetran = true

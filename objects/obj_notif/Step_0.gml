@@ -1,4 +1,4 @@
-if (realy >= 930 && timer >= 0)
+if realy >= 930 && timer >= 0
     realy -= 3
 switch room
 {
@@ -9,7 +9,7 @@ switch room
 }
 
 timer--
-if (timer <= 0)
+if timer <= 0
     realy++
-if (realy >= 1200)
+if realy >= 1200
     instance_destroy()

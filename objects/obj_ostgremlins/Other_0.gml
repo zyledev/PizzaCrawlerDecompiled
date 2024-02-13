@@ -1,2 +1,2 @@
-if (y <= -100)
+if y <= -100
     instance_destroy(id, false)

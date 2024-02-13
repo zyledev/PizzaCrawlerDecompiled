@@ -1,2 +1,2 @@
-if (attacking && other.state != (2 << 0))
+if attacking && other.state != (2 << 0)
     hurtplayer()

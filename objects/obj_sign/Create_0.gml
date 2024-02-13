@@ -1,4 +1,4 @@
 text = "ERROR"
-active = 0
+active = false
 delay = 30
 currentChar = 1

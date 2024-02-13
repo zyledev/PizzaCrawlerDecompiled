@@ -1,7 +1,7 @@
-if (target_door == "")
+if target_door == ""
     target_door = "A"
-var door = asset_get_index(("obj_door" + string_upper(target_door)))
-if (door != -1 && instance_exists(door))
+var door = asset_get_index("obj_door" + string_upper(target_door))
+if door != -1 && instance_exists(door)
 {
     x = door.x
     y = door.y

@@ -30,4 +30,4 @@ hitboxid = -4
 attacking = 0
 attackbuffer = 30
 hp = 1
-escape = 0
+escape = false

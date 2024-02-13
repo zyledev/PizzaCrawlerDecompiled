@@ -1,2 +1,2 @@
-global.useshoptheme = 1
+global.useshoptheme = true
 image_alpha = clamp((image_alpha - 0.1), 0, 1)

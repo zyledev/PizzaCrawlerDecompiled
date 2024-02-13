@@ -2,14 +2,14 @@ if player
     audio_stop_sound(player)
 if global.mute
 {
-    global.mute = 0
-    global.shopoverride = 0
+    global.mute = false
+    global.shopoverride = false
     if global.useshoptheme
     {
         audio_stop_sound(mus_shop)
-        global.useshoptheme = 0
+        global.useshoptheme = false
     }
-    with (obj_editor)
+    with obj_editor
     {
         if player
             audio_resume_sound(player)

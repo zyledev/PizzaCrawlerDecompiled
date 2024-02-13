@@ -1,9 +1,9 @@
 if active
 {
     draw_textbox()
-    if (currentChar < string_length(text))
+    if currentChar < string_length(text)
     {
-        if ((room_speed % delay) == 0)
+        if (room_speed % delay) == 0
             currentChar++
     }
     set_text(global.font, c_white, 0)

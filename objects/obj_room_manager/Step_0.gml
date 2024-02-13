@@ -1,4 +1,4 @@
-if (global.darkness && room != Titlescreen)
+if global.darkness && room != Titlescreen
 {
     application_surface_draw_enable(false)
     var camera = view_get_camera(0)

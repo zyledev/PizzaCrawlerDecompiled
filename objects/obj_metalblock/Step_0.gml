@@ -1,9 +1,9 @@
-if (hp <= 0)
+if hp <= 0
     instance_destroy()
 hurtable--
-if (hp == 2)
+if hp == 2
     sprite_index = spr_metalblock_hurt
-else if (hp == 1)
+else if hp == 1
     sprite_index = spr_metalblock_damaged
 else
     sprite_index = spr_metalblock

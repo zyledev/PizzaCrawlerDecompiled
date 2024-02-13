@@ -1,5 +1,5 @@
 shader_set(shd_pal);
-if (usepalette)
+if usepalette
 {
 	try
 	{

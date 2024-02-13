@@ -3,19 +3,19 @@ statess =
 {
     idle: 
     {
-        left: 38,
-        right: 172,
-        down: 118,
-        up: 239
+        left: spr_noise_idleleft,
+        right: spr_noise_idleright,
+        down: spr_noise_idle,
+        up: spr_noise_idleup
     },
     walk: 
     {
-        left: 173,
-        right: 174,
-        down: 271,
-        up: 82
+        left: spr_noise_left,
+        right: spr_noise_right,
+        down: spr_noise_down,
+        up: spr_noise_up
     },
-    dead: 256
+    dead: spr_noise_dead
 }
 
 state = statess.walk
@@ -24,4 +24,4 @@ vsp = 0
 prevhsp = hsp
 prevvsp = vsp
 deadtimer = 60
-noise = 1
+noise = true
